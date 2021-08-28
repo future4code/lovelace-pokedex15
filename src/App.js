@@ -1,12 +1,14 @@
+//Link do surge: abrasive-wilderness.surge.sh
 import React from 'react';
+import { GlobalState } from './global/GlobalState';
 import { Router } from './routes/Router';
-import styled from 'styled-components'
-
 
 function App() {
   return (
     <div>
-      <Router />
+      <GlobalState>
+        <Router/>
+      </GlobalState>
     </div>
   );
 }

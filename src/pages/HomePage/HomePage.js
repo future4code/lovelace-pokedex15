@@ -1,23 +1,26 @@
-import react from 'react'
+import { Main, TitleContainer } from './styled'
+import { PokeCard } from '../../components/PokeCard/PokeCard'
+import { GlobalStateContext } from '../../global/GlobalContext'
+import { useContext } from 'react'
+import { Header } from '../../components/Header/Header'
 import { goToPokedexPage } from '../../routes/coordinator'
-import { useHistory } from 'react-router'
-import { Header } from '../../components/Header'
-import { PokeCard } from '../../components/PokeCard'
-import { Main } from './styled'
+import { useHistory } from 'react-router-dom'
 
 export const HomePage = () => {
+    const {pokemons} = useContext(GlobalStateContext)
     const history = useHistory()
 
     return (
         <div>
-            <Header />
+            <Header title={"Pokémons"} leftButtonFunction={() => goToPokedexPage(history)} />
+            <TitleContainer>Lista de Pokémons</TitleContainer>
             <Main>
-                <h1>Lista de Pokémons</h1>
-                <div>
-                    <button onClick={() => goToPokedexPage(history)}>Pokedex</button>
-                </div>
-                <PokeCard />
-            </Main>
+                {
+                    pokemons.map((poke) => {
+                        return <PokeCard key={poke.name} pokemon={poke}/>
+                    })
+                }
+            </Main>  
         </div>
     )
 }

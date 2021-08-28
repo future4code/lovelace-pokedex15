@@ -6,14 +6,14 @@
 - Victor
 
 ### Link do Surge: 
-- www.link.com.br
+- abrasive-wilderness.surge.sh
 
 ### O que funciona:
-- 
+- PokeList e routes.
 - 
 - 
 
 ### O que não funciona: 
-- 
+- PokeDex e PokeDetails
 - 
 - 

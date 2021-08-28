@@ -1,4 +1,4 @@
-//Link do surge: abrasive-wilderness.surge.sh
+//Link do surge: miniature-zipper.surge.sh
 import React from 'react';
 import { GlobalState } from './global/GlobalState';
 import { Router } from './routes/Router';

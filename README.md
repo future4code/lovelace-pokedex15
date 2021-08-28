@@ -6,7 +6,7 @@
 - Victor
 
 ### Link do Surge: 
-- abrasive-wilderness.surge.sh
+- miniature-zipper.surge.sh
 
 ### O que funciona:
 - PokeList e routes.
